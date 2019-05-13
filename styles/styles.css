@@ -1,7 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Chivo:300,400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
 
-body { font-family: 'Droid Serif'; }
+
+body { font-family: 'Chivo'; }
 h1, h2, h3 { font-weight: normal; }
 h4 { font-size: 1.3em; font-weight: bold; }
 ul, ol { line-height: 1.6; margin-top: 10px; margin-bottom: 5px; font-size: 25px; }
@@ -20,7 +21,7 @@ pre { margin: 0.5em 0em 0em 0em; }
   }
 }
 
-.remark-code, .remark-inline-code { font-family: 'Consolas'; }
+.remark-code, .remark-inline-code { font-family: 'Inconsolata'; }
 
 /* title page styles */
 .page-title { 
@@ -140,8 +141,11 @@ div#slide-footer {
 }
 
 div.page-slide>.remark-slide-number {
-  bottom: 28px;
-  right: 10px;
+  bottom: 33px;
+  color: white;
+  font-size: .85rem;
+  right: 8px;
+  opacity: 1;
 }
 
 div.page-slide th { font-weight: bold; border: 1px solid #333333; padding: 3px; }
