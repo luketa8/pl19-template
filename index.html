@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Percona Live 2019</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css"/>
+    <style>
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+layout: true
+<div id="slide-footer"></div>
+
+---
+class: page-title
+
+# PL19 Open Source Database Conference
+
+.title-author[
+Jervin Real
+]
+
+---
+class: page-slide
+
+# MySQL
+
+.center[
+### The World's Most Popular Open Source Database
+]
+
+---
+class: page-slide
+
+# MySQL
+
+### Subheading
+
+- Lorem ipsum pages and mutexes
+
+???
+- Presenter notes
+
+---
+class: page-topic, topic-footer
+
+.topic[
+# Topic A
+## Subheading
+]
+
+---
+class: page-slide
+
+# Slide with Split Image
+
+### Nice images below.
+
+- Benchmarking
+
+.w50pct-left[
+.center[
+![:image 300px](./images/percona-server-for-mysql.png)
+]
+]
+
+.w50pct-right[
+.center[
+![:image 300px](./images/mariadb.png)
+]
+]
+
+
+---
+class: page-slide
+
+# Slide with One Large Image
+
+### Good picture
+
+.center[
+![:image 400px](./images/percona-server-for-mysql.png)
+]
+
+- Thoughts?
+
+---
+class: page-slide
+
+# Slide with Code
+
+### Some SQL goodness
+
+- Looks familiar?
+
+```sql
+mysql> LOCK TABLES FOR BACKUP;
+mysql> LOCK BINLOG;
+mysql> SHOW MASTER STATUS;
+mysql> -- take ZFS snapshot here
+mysql> -- WSREP cluster uuid:seqno
+mysql> UNLOCK TABLES;
+mysql> UNLOCK BINLOG;
+```
+
+???
+- Presenter nodes
+
+---
+class: page-slide
+
+# Slide with Shell Code
+
+### Shell and SQL are different
+
+- Nice colors
+
+```shell
+ubuntu@ip-10-1-2-117:~$ time sudo zfs send -wcR mysql@201804192210 \
+    | mbuffer -s 128k -m 1G -O 10.1.2.126:9999
+in @ 22.2 MiB/s, out @ 76.4 MiB/s,  156 GiB total, buffer   0% full
+summary:  156 GiByte in 23min 22.1sec - average of  114 MiB/s
+
+real  23m24.961s
+user  0m9.052s
+sys 6m39.036s
+```
+
+```shell
+ubuntu@ip-10-1-2-126:~$ mbuffer -s 128k -m 1G -I 9999 | sudo zfs recv -F mysql
+in @ 77.9 MiB/s, out @ 77.9 MiB/s,  156 GiB total, buffer   0% full
+summary:  156 GiByte in 23min 24.7sec - average of  114 MiB/s
+
+ubuntu@ip-10-1-2-126:~$ sudo zfs load-key -a
+2 / 2 key(s) successfully loaded
+
+ubuntu@ip-10-1-2-126:~$ sudo zfs mount -a
+```
+
+???
+- I really like mbuffer ...
+
+---
+class: page-topic, topic-footer
+
+.topic[
+# Questions?
+]
+
+---
+class: page-slide
+
+# Percona is Hiring!
+
+- Consultants
+  - MySQL
+  - MongoDB
+  - PostgreSQL
+- and more ...
+
+
+.center[
+https://www.percona.com/about-percona/careers
+]
+
+    </textarea>
+    <script src="./remarkjs/remark-latest.min.js"></script>
+    <script src="./macros/remark.js"></script>
+    <script>
+      var slideshow = remark.create({
+        navigation: {
+          scroll: false,
+          touch: false,
+          click: false,
+          highlightSpans: true,
+          highlightLanguage: 'bash',
+          highlightLines: true
+        }
+      });
+    </script>
+  </body>
+</html>

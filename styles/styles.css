@@ -1,0 +1,210 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+body { font-family: 'Droid Serif'; }
+h1, h2, h3 { font-weight: normal; }
+h4 { font-size: 1.3em; font-weight: bold; }
+ul, ol { line-height: 1.6; margin-top: 10px; margin-bottom: 5px; font-size: 25px; }
+p, li { font-size: 25px; }
+pre { margin: 0.5em 0em 0em 0em; }
+
+@page {
+  size: 1280px 681px;
+  size: 908px 681px;
+  margin: 0;
+}
+
+@media print {
+  .remark-slide-scaler {
+    transform: scale(0.90) !important;
+  }
+}
+
+.remark-code, .remark-inline-code { font-family: 'Consolas'; }
+
+/* title page styles */
+.page-title { 
+  background: url(../images/pl19-bg-title.jpg) center center no-repeat;
+  background-size: contain;
+  color: #073161;
+}
+
+/* title page styles */
+.page-blank { 
+  color: #ffffff;
+}
+
+.page-title>h1 {
+  position: absolute;
+  top: 210px;
+  left: 20px;
+  width: 60%;
+  font-size: 2.2em;
+  font-weight: bold;
+  text-align: right;
+}
+
+.page-title>.title-author { 
+  position: absolute;
+  top: 370px;
+  left: 20px;
+  width: 60%;
+  font-size: 2.2em;
+  text-align: right;
+}
+
+div.title-author>ul { list-style: none; }
+
+.title-logo {
+  position: absolute;
+  bottom: 100px;
+  left: 0px;
+  text-align: right;
+  background-color: #ffffff;
+  height: 90px;
+  width: 95%;
+  background: url(../images/Percona-logo-color.png) center right no-repeat;
+  background-size: 300px;
+}
+
+.page-title>#slide-footer { display: none; }
+.page-title>.remark-slide-number { display: none; }
+
+/* topic pages styles */
+.page-topic { 
+  height: 100%; width: 100%; padding: 0; 
+  background: url(../images/pl19-bg-blue.jpg) center top no-repeat;
+  background-size: contain;
+}
+
+
+.topic {
+  position: absolute;
+  top: 210px;
+  width: 100%;
+  height: 200px;
+  font-size: 2.2em;
+  font-weight: bold;
+  text-align: right;
+  background-color: #ffffff;
+  color: #073161;
+}
+
+.topic>h1 {
+  border-bottom: 1px solid #073161;
+  padding: 35px 0 5px 0;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.2em;
+}
+
+.topic>h2 {
+  padding: 5px;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 0.8em;
+}
+
+.page-topic>#slide-footer { display: none; }
+.page-topic>.remark-slide-number { display: none; }
+
+/* general slides styles */
+.page-slide { 
+  padding: 0 40px; 
+  background: url(../images/pl19-bg-slide.png) right bottom no-repeat;
+  background-size: contain;
+}
+
+div.page-slide>h1 {
+  font-size: 1.8em;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 5px solid #073161;
+  text-align: center;
+  color: #073161;
+}
+
+div.page-slide h3 {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+div#slide-footer {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 80px;
+  width: 100%;
+  background: url(../images/pl19-bg-page.png) center right no-repeat;
+  background-size: 200px;
+}
+
+div.page-slide>.remark-slide-number {
+  bottom: 28px;
+  right: 10px;
+}
+
+div.page-slide th { font-weight: bold; border: 1px solid #333333; padding: 3px; }
+div.page-slide td { border: 1px solid #333333; padding: 3px; vertical-align: top; }
+div.page-slide table { font-size: 0.7em; }
+
+.w50pct-left {
+  width: 48%;
+  float: left;
+  text-align: left;
+}
+.w50pct-right {
+  width: 48%;
+  float: right;
+  text-align: left;
+  border-left: 2px solid #666666;
+  padding-left: 15px;
+}
+.wbold {
+  font-weight: bold;
+}
+.w30pct-left {
+  width: 30%;
+  float: left;
+  text-align: left;
+}
+.w70pct-right {
+  width: 67%;
+  float: right;
+  text-align: left;
+  font-size: 80%;
+}
+.w70pct-left {
+  width: 67%;
+  float: left;
+  text-align: left;
+}
+.w30pct-right {
+  width: 30%;
+  float: right;
+  text-align: left;
+  font-size: 80%;
+}
+.footnote {
+  position: absolute;
+  bottom: 30px;
+  padding-top: 10px;
+  font-size: 7pt;
+}
+.note>ul>li {
+  font-size: 0.4em !important;
+  text-align: left;
+  font-style: italic;
+}
+
+div.remark-notes>ul>li {
+  font-size: 0.7em !important;
+}
+
+.console12 pre code .remark-code-line { font-size: 12pt; }
+.console10 pre code .remark-code-line { font-size: 10pt; }
+.console9 pre code .remark-code-line { font-size: 9pt; }
+
+.console12 code.remark-inline-code { font-size: 12pt; }
+.console10 code.remark-inline-code { font-size: 10pt; }
+.console9 code.remark-inline-code { font-size: 9pt; }
